@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_140603) do
+ActiveRecord::Schema.define(version: 2020_05_26_111108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,21 +37,6 @@ ActiveRecord::Schema.define(version: 2020_05_26_140603) do
     t.text "body"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_forums_on_user_id"
-  end
-
-  create_table "payments", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "token"
-    t.string "charge_id"
-    t.string "error_message"
-    t.integer "payment_gateway"
-    t.integer "price_cents", default: 0, null: false
-    t.string "price_currency", default: "USD", null: false
-    t.string "paypal_plan_name"
-    t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -120,6 +105,5 @@ ActiveRecord::Schema.define(version: 2020_05_26_140603) do
 
   add_foreign_key "appointments", "users"
   add_foreign_key "forums", "users"
-  add_foreign_key "payments", "users"
   add_foreign_key "taggings", "tags"
 end
