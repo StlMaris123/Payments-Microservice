@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'redis'
 gem 'redis-session-store'
-
+gem "africastalking-ruby"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"

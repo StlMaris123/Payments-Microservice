@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card bg-light" >
+  <div class="card-body">
+    <h5 class="card-title text-center">Amount: <%= @payment.amount %></h5>
+    <p class="card-title text-center"> <%= @payment.description %></p>
+    </div>
+</div>
+<div class="card " >
+    <div class="card-body">
+    <div class="row">
+    <div class="col-sm-6">
+    <h6 class="card-subtitle mb-2 text-muted">From Account details(My Account)</h6>
+    <p class="card-text"><strong><p>Bank Account: </strong><%= @payment&.from_bank_account %></p>
+    <p class="card-text"> <strong><p>Account Name: </strong><%= @payment&.from_account_name %></p>
+    <p class="card-text"> <strong><p>Account Number: </strong><%= @payment&.from_account_number %></p>
+    <p class="card-text"> <strong><p>Bank Code: </strong> <%= @payment&.from_bank_code %></p>
+    <p class="card-text"> <strong><p>Currency: </strong> <%= @payment&.from_currency %></p>
+    </div>
+     <div class="col-sm-6">
+     <h6 class="card-subtitle mb-2 text-muted">To Account Details(Recipient Account)</h6>
+    <p class="card-text"><strong><p>Bank Account: </strong> <%= @payment.to_bank_account %></p>
+    <p class="card-text"> <strong><p>Account Name: </strong><%= @payment.to_account_name %></p>
+    <p class="card-text"> <strong><p>Account Number: </strong><%= @payment&.from_account_number %></p>
+    <p class="card-text"> <strong><p>Bank Code: </strong>  <%= @payment.to_bank_code %></p>
+    <p class="card-text"> <strong><p>Currency: </strong>   <%= @payment.to_currency_code %></p>
+    </div>
+    </div>
+    
+    <a href="#" class="card-link"> <%= link_to 'Edit', edit_payment_path(@payment) %> </a> |
+    <a href="#" class="card-link"><%= link_to 'Back', payments_path %> </a>
+  </div>
+</div>
