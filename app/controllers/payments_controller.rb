@@ -4,7 +4,6 @@ class PaymentsController < ApplicationController
   # GET /payments
   # GET /payments.json
   def index
-    @user = User.find_by_email("stellamarisnjage@gmail.com")
     @payments = @user&.payments
   end
 
@@ -24,8 +23,7 @@ class PaymentsController < ApplicationController
 
   # POST /payments
   # POST /payments.json
-  def create
-    @user = User.find_by_email("stellamarisnjage@gmail.com")
+  def create    
     @payments = @user&.payments
     @payment = @user&.payments&.new(payment_params)
 
