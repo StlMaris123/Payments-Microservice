@@ -34,7 +34,7 @@ gem "africastalking-ruby"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"
-gem 'mpesa_stk'
+# gem 'mpesa_stk'
 
 
 group :development, :test do
