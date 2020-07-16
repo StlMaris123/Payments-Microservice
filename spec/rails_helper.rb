@@ -55,6 +55,9 @@ RSpec.configure do |config|
   #       # ...
   #     end
   config.include FactoryBot::Syntax::Methods
+
+
+  
   #
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs

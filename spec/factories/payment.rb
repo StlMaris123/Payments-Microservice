@@ -8,7 +8,7 @@ FactoryBot.define do
     end
   
   
-    factory :invalid_agency, class: Agency do |f|
+    factory :invalid_payment, class: Payment do |f|
       f.name ''
       f.street_address ''
       f.city ''

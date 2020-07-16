@@ -16,11 +16,19 @@ RSpec.describe "/till_numbers", type: :request do
   # TillNumber. As you add validations to TillNumber, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      doctor_name: "Murugi",
+      contact_number: "0752908765",
+      till_number: 12345
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      doctor_name: " ",
+      contact_number: " ",
+    
+    }
   }
 
   describe "GET /index" do

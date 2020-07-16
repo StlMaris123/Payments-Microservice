@@ -30,7 +30,7 @@ class MobilePaymentsController < ApplicationController
 
     respond_to do |format|
       if @mobile_payment.save
-        MpesaStk::PushPayment.call(mobile_payment_params[:amount], @user.phone_number)
+        MpesaStk::PushPayment.call(mobile_payment_params[:amount], @user&.phone_number)
         format.html { redirect_to root_path, notice: 'Mobile payment was successfully created.' }
         format.json { render :show, status: :created, location: @mobile_payment }
       else

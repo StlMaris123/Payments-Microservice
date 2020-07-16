@@ -16,11 +16,19 @@ RSpec.describe "/mobile_payments", type: :request do
   # MobilePayment. As you add validations to MobilePayment, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      amount: 5.0,
+      till_number: 174379,
+      reason_for_payment: "ASDXCVB"
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      amount: nil,
+      till_number: 174379,
+      reason_for_payment: "ASDXCVB"
+    }
   }
 
   describe "GET /index" do
@@ -64,7 +72,7 @@ RSpec.describe "/mobile_payments", type: :request do
 
       it "redirects to the created mobile_payment" do
         post mobile_payments_url, params: { mobile_payment: valid_attributes }
-        expect(response).to redirect_to(mobile_payment_url(MobilePayment.last))
+        expect(response).to redirect_to(root_url)
       end
     end
 
