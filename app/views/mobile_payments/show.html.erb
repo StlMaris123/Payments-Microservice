@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @mobile_payment.amount %>
+</p>
+
+<p>
+  <strong>Till number:</strong>
+  <%= @mobile_payment.till_number %>
+</p>
+
+<p>
+  <strong>Reason for payment:</strong>
+  <%= @mobile_payment.reason_for_payment %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_payment_path(@mobile_payment) %> |
+<%= link_to 'Back', mobile_payments_path %>

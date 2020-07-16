@@ -1,0 +1,2 @@
+class TillNumber < ApplicationRecord
+end

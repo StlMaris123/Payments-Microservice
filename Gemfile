@@ -34,6 +34,7 @@ gem "africastalking-ruby"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'mpesa_stk'
 
 
 group :development, :test do
@@ -44,6 +45,8 @@ group :development, :test do
   gem 'rubocop', require: false
   gem 'pry-rails'
   gem 'pry-nav'
+  gem 'annotate'
+  gem 'dotenv-rails'
 end
 
 group :development do

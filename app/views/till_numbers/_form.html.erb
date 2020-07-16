@@ -1,0 +1,34 @@
+<div class="form-group">
+  <%= form_with(model: till_number, local: true) do |form| %>
+    <% if till_number.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(till_number.errors.count, "error") %> prohibited this till_number from being saved:</h2>
+
+        <ul>
+          <% till_number.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+   
+    <div class="field">
+      <%= form.label :doctor_name %>
+      <%= form.text_field :doctor_name, class: "form-control"  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :contact_number %>
+      <%= form.text_field :contact_number, class: "form-control"  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :till_number %>
+      <%= form.number_field :till_number, class: "form-control"  %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Make Payment', class: "btn btn-primary"%>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Doctor name:</strong>
+  <%= @till_number.doctor_name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @till_number.contact_number %>
+</p>
+
+<p>
+  <strong>Till number:</strong>
+  <%= @till_number.till_number %>
+</p>
+
+<%= link_to 'Edit', edit_till_number_path(@till_number) %> |
+<%= link_to 'Back', till_numbers_path %>
